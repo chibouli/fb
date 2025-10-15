@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Demandes traitées</title>
+    <style>
+        body {
+            background-color: #f6f8f9; /* Gris clair */
+            color: #182663; /* Ultramarine */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #007acd; /* Bleu Bolt */
+        }
+        #counter {
+            font-size: 48px;
+            margin: 20px;
+            color: #232d35; /* Gris foncé */
+        }
+        button {
+            font-size: 24px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #ffffff; /* Blanc */
+        }
+        #increment {
+            background-color: #007acd; /* Bleu Bolt */
+        }
+        #decrement {
+            background-color: #182663; /* Ultramarine */
+        }
+    </style>
+</head>
+<body>
+    <h1>Demandes traitées</h1>
+    <div id="counter">0</div>
+    <button id="increment">+1</button>
+    <button id="decrement">-1</button>
+
+    <script>
+        let counter = 0;
+        const counterDisplay = document.getElementById('counter');
+        document.getElementById('increment').addEventListener('click', () => {
+            counter++;
+            counterDisplay.textContent = counter;
+        });
+        document.getElementById('decrement').addEventListener('click', () => {
+            counter--;
+            counterDisplay.textContent = counter;
+        });
+    </script>
+</body>
+</html>
